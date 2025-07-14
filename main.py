@@ -1,10 +1,10 @@
 from fastapi import FastAPI
+from routers.book_router import book_router
 
 app = FastAPI()
 
-# Import and include your routers here
-# from routers import example_router
-# app.include_router(example_router)
+app.include_router(book_router)
+
 
 @app.get("/")
 def read_root():
